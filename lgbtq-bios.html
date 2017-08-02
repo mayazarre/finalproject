@@ -1,6 +1,112 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+button.accordion {
+    background-color: salmon;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 35%;
+     margin-top: 150px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd; 
+}
+
+div.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+}
+        .floating-box1 {
+    background: lavender;
+    float: left;
+    width: 190px;
+    height: 300px;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    border: 3px solid lavender;  
+}
+    
+    .floating-box {
+    background: lavender;
+    float: left;
+    width: 190px;
+    height: 300px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    border: 3px solid gold;  
+}
+    
+
+.after-box {
+    clear: left;
+    border: 3px solid red;   
+    }
+    
+</style>
+</head>
+<body>
+
+
+
+<button class="accordion">Frida Kahlo</button>
+<div class="panel">
+  <p>Frida is a mexican-german artist.</p>
+</div>
+
+<div class="floating-box1">Frida Kahlo</div>
+<div class="floating-box1">Tammy Baldwin box</div>
+<div class="floating-box1">Sylvia Riveria</div>
+    <div></div>
+ 
+
+ <div class="floating-box"></div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
 
 <style>
     button.accordion {
@@ -44,36 +150,7 @@ div.panel {
     transition: max-height 0.2s ease-out;
 }
 
-    .floating-box1 {
-    background: lavender;
-    float: left;
-    width: 190px;
-    height: 300px;
-    margin-top: 150px;
-    margin-bottom: 100px;
-    margin-right: 150px;
-    margin-left: 80px;
-    border: 3px solid lavender;  
-}
-    
-    .floating-box {
-    background: lavender;
-    float: left;
-    width: 190px;
-    height: 300px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 150px;
-    margin-left: 80px;
-    border: 3px solid gold;  
-}
-    
 
-.after-box {
-    clear: left;
-    border: 3px solid red;   
-    }
-    
 
 
 </style>
@@ -89,15 +166,7 @@ div.panel {
 
   
  
-<div class="floating-box1">Frida Kahlo</div>
-<div class="floating-box1">Tammy Baldwin box</div>
-<div class="floating-box1">Sylvia Riveria</div>
-    <div></div>
- 
-
- <div class="floating-box"></div>
-<div class="floating-box">Floating box</div>
-<div class="floating-box">Floating box</div>\
+\
     
     
 
@@ -122,3 +191,4 @@ for (i = 0; i < acc.length; i++) {
 }
 </script>
 </html>
+ -->
