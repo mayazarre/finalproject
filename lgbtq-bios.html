@@ -3,7 +3,48 @@
 <head>
 
 <style>
-.floating-box1 {
+    button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+    .floating-box1 {
     background: lavender;
     float: left;
     width: 190px;
@@ -33,68 +74,6 @@
     border: 3px solid red;   
     }
     
-.floating-box1{ 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
-
-body {
-  font-family: "Open Sans", Arial;
-  background: #CCC;
-}
-main {
-  background: #EEE;
-  width: 600px;
-  margin: 20px auto;
-  padding: 10px 0;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-}
-h2 {
-  text-align: center;
-}
-p {
-  font-size: 13px;
-}
-input {
-  display: none;
-  visibility: hidden;
-}
-label {
-  display: block;
-  padding: 0.5em;
-  text-align: center;
-  border-bottom: 1px solid #CCC;
-  color: #666;
-}
-label:hover {
-  color: #000;
-}
-label::before {
-  font-family: Consolas, monaco, monospace;
-  font-weight: bold;
-  font-size: 15px;
-  content: "+";
-  vertical-align: text-top;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 3px;
-  background: radial-gradient(ellipse at center, #CCC 50%, transparent 50%);
-}
-#expand {
-  height: 0px;
-  overflow: hidden;
-  transition: height 0.5s;
-  background: url(http://placekitten.com/g/600/300);
-  color: #FFF;
-}
-section {
-  padding: 0 20px;
-}
-#toggle:checked ~ #expand {
-  height: 250px;
-}
-#toggle:checked ~ label::before {
-  content: "-";
-}
 
 
 </style>
@@ -112,24 +91,37 @@ section {
 
  <div class="floating-box"></div>
 <div class="floating-box">Floating box</div>
-<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>\
+    
+    <button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
+
+    
  
-    <main>
-  <h2>CSS Expand/Collapse Section</h2>
-  <input id="toggle" type="checkbox" checked>
-  <label for="toggle">Hidden Kitten</label>
-  <div id="expand">
-    <section>
-      <p>mew</p>
-    </section>
-  </div>
-  <section>
-    <h3>Other content</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porta non turpis faucibus lobortis. Curabitur non eros rutrum, gravida felis non, luctus velit. Ut commodo congue velit feugiat lobortis. Etiam nec dolor quis nulla bibendum blandit vitae nec enim. Maecenas id dignissim erat. Aenean ac mi nec ante venenatis interdum quis vel lacus.
-    </p>
-    <p>Aliquam ligula est, aliquet et semper vitae, elementum eget dolor. In ut dui id leo tristique iaculis eget a dui. Vestibulum cursus, dolor sit amet lacinia feugiat, turpis odio auctor nisi, quis pretium dui elit at est. Pellentesque lacus risus, vulputate sed gravida eleifend, accumsan ac ante. Donec accumsan, augue eu congue condimentum, erat magna luctus diam, adipiscing bibendum sem sem non elit.</p>
-  </section>
-</main>
+    
 
 
   
