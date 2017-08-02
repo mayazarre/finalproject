@@ -2,107 +2,33 @@
 <html>
 <head>
 <style>
-p {
-    display: inline;
-}
-#example1 {
-    background: red;
-    width: 300px;
-    padding: 15px;
-    margin-top: px;
-    margin-left: 5px;
+.floating-box {
+    background: lavender;
     float: left;
+    width: 186px;
+    height: 300px;
+    margin: 10px;
+    border: 3px solid lavender;  
 }
 
-#example2 {
-background: orange;
-    width: 300px;
-    padding: 15px;
-    margin-top: 5px;
-    margin-right: 5px;
-    float: right;
-    
+.after-box {
+    clear: left;
+    border: 3px solid red;      
 }
-
-#example3 {
-background: yellow;
-    width: 300px;
-    padding: 15px;
-    margin-top: 5px;
-    margin-right: 10px;
-    float: right;
-    
-}
-    
-    
-    <div></div>
-    p {
-    display: inline;
-}
-#example4 {
-    background: green;
-    width: 300px;
-    padding: 15px;
-    margin-bottom: px;
-    margin-left: 5px;
-    float: left;
-}
-    
-    #example5 {
-background: blue;
-    width: 300px;
-    padding: 15px;
-    margin-bottom: 5px;
-    margin-right: 5px;
-    float: right;
-    
-}
-    #example6 {
-background: purple;
-    width: 300px;
-    padding: 15px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    float: right;
-    }
-    
-    
-
-
-
 </style>
 </head>
 <body>
-<div id="example1">
 
-<p> 1Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-</div>
-<div id="example2">
- 
-<h2>Lorem Ipsum Dolor</h2>
-<p>2Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-</div>
-<div id="example3">
-<h2>Lorem Ipsum Dolor</h2>
-<p>2Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-</div>
-    <div id="example4">
-<h2>Lorem Ipsum Dolor</h2>
-<p> 1Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-</div>
-    <div id="example5">
-<h2>Lorem Ipsum Dolor</h2>
-<p> 1Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-</div>
+<h2>The Old Way - using float</h2>
 
-    <div id="example6">
-<h2>Lorem Ipsum Dolor</h2>
-<p> 1Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
 
- 
- 
- 
+
 
 </body>
 </html>
