@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <style>
 .floating-box1 {
     background: lavender;
@@ -34,16 +38,32 @@
 </style>
 </head>
 <body>
+    <div data-role="page" id="pageone">
+  <div data-role="header">
+    <h1>Collapsible Blocks</h1>
+  </div>
 
-    
- <img src=images/frida-kahlo.jpg>
+  <div data-role="main" class="ui-content">
+    <div data-role="collapsible">
+      <h1>Click me - I'm collapsible!</h1>
+      <p>I'm the expanded content.</p>
+    </div>
+  </div>
+
+  <div data-role="footer">
+    <h1>Insert Footer Text Here</h1>
+  </div>
+</div> 
+
+  
+ 
 <div class="floating-box1">Frida Kahlo</div>
-<div class="floating-box1">Floating box</div>
-<div class="floating-box1">Floating box</div>
+<div class="floating-box1">Tammy Baldwin box</div>
+<div class="floating-box1">Sylvia Riveria</div>
     <div></div>
  
 
- <div class="floating-box">Floating box</div>
+ <div class="floating-box"></div>
 <div class="floating-box">Floating box</div>
 <div class="floating-box">Floating box</div>
 
