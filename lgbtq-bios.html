@@ -23,7 +23,22 @@ button.accordion2 {
     cursor: pointer;
     padding: 18px;
     width: 55%;
-    margin: 15%;
+    margin: 12%;
+   
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+       
+       button.accordion3 {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 55%;
+    margin: 12%;
    
     border: none;
     text-align: left;
@@ -36,6 +51,9 @@ button.accordion1.active, button.accordion1:hover {
 }
 
 button.accordion2.active, button.accordion2:hover {
+    background-color: #ddd; 
+}
+       button.accordion3.active, button.accordion3:hover {
     background-color: #ddd; 
 }
 div.panel {
@@ -56,6 +74,10 @@ div.panel {
 
 
 <button class="accordion2">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+       <button class="accordion3">Section 3</button>
 <div class="panel">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
@@ -90,6 +112,21 @@ for (i = 0; i < acc.length; i++) {
         }
     }
 }
+   var acc = document.getElementsByClassName("accordion3");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+}
+
 </script>
 
 </body>
