@@ -2,6 +2,64 @@
 <html>
 <head>
 <style>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: left;
+}
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Zilla Slab', serif;
+}
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: purple;
+}
+li.dropdown {
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-family: 'Zilla Slab', serif;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown:hover .dropdown-content {
+ display: block;   
+}
+    
+h1 {
+text-align:center;
+font-family: 'Bevan', cursive;
+font-size: 40px;
+}
+h2 {
+text-align:center;
+}
+    
 button.accordion {
     background-color: #eee;
     color: #444;
@@ -26,13 +84,33 @@ div.panel {
 </style>
 </head>
 <body>
+<h1> WONDER WOMEN </h1>
+<center> <img src=we-can-do-it--rosie-the-riveter-large.png height="160" width="150" </center>
+<h2>Real life badass pioneers, leaders, fighters, and scholars </h2>
 
-<h2>STEM</h2>
+<ul>
+  <li><a href="https://mayazarre.github.io/finalproject/women.html">Home</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Bios</a>
+    <div class="dropdown-content">
+      <a href="https://mayazarre.github.io/finalproject/lgbtq-bios.html">LGBTQ</a>
+      <a href="#">Women of Color</a>
+      <a href="https://mayazarre.github.io/finalproject/stem.html">STEM</a>
+      <a href="#">Women Warriors</a>
+      <a href="#">More</a>
+  <li><a href="https://mayazarre.github.io/finalproject/inspirations.html">Inspirations For the Project</a></li>
+  <li><a href="#">Sources</a></li>
+    </div>
+  </li>
+</ul>    
+
+
+<h3>STEM</h3>
 
 <button class="accordion">Grace Hopper</button>
 <div class="panel">
-    <h3>(1906-1994)</h3>
-    <h4>Smashing the “We’ve always done it that way”</h4>
+    <h4>(1906-1994)</h4>
+    <h5>Smashing the “We’ve always done it that way”</h5>
     
 
     
@@ -47,8 +125,8 @@ div.panel {
 
 <button class="accordion">Margaret Heafield Hamiliton</button>
 <div class="panel">
-    <h3>(1936-)</h3>
-    <h4>The working mom who took us to the moon</h4>
+    <h4>(1936-)</h4>
+    <h5>The working mom who took us to the moon</h5>
     <img src="images/mhamilton.jpg" height="350" width="250">
     <p>Apollo 11 launched and landed successfully in 1969, with millions stressfully looking to the sky or their tv sets to watch the astronauts take their first steps, but a key woman was left out of the public celebration. Margaret Hamilton wrote and developed the code for Apollo 11’s on-board guidance for navigation and landing, but since that wasn’t enough contribution for her, she also first coined the term software engineering. As a working mom, she would often bring her 4 year old by as she programmed. She found that since software engineering was not yet a field, she often had to invent answers and invented as she went along.
 
@@ -57,8 +135,8 @@ div.panel {
 
 <button class="accordion">Rachel Carson</button>
 <div class="panel">
-    <h3>(1907-1964)</h3>
-    <h4>Conservation and Controversy</h4>
+    <h4>(1907-1964)</h4>
+    <h5>Conservation and Controversy</h5>
     <img src="images/rcarson.jpg">
         <p>Rachel Carson was born into her love of nature and conservation. She expressed her love of nature first as a writer and then moved into the career of a marine biologist. She was hired by the U.S. bureau of Fisheries to write radio scripts during the depression, and later became the editor in chief for all publications of the U.S. Fish and Wildlife Services. She later quit to devote herself to writing, Her books became a biography of the ocean and made Carson famous as a naturalist and science writer for the public and later, after conducting research on the effect of pesticides on the food chain, she changed her focus in order to warn the public about the long-term effects of misusing pesticides. In her famed book Silent Spring, she challenged the practices of agricultural scientists and the government and called for a change in the way humans viewed and interacted with the natural world. Carson was attacked both by the Chemical Industry and by the Government for being an alarmist making a fuss out of nothing, she testified before congress in 1963 to call for new policies to protect human health and the environment. At the time, she was 56 and in the final stages of breast cancer and had already had a radical mastectomy. She was barely strong enough to walk to and from her chair, but showed up because of how passionate she was in her work. 
 
@@ -68,8 +146,8 @@ div.panel {
   
     <button class="accordion">Rita Levi-Montalcini</button>
 <div class="panel">
-<h3>(1909-2012)</h3>
-    <h4>A rebel in medicine and cell theory</h4>
+<h4>(1909-2012)</h4>
+    <h5>A rebel in medicine and cell theory</h5>
     <img src="images/rlevi.jpg">
         <p>“Above all, don’t fear difficult moments. The best comes from them.”
 Born in Turin, Italy in 1909, Rita’s love for science and medicine was challenged at a young age. Her father believed that a woman’s place was at home as a wife and mother. Despite his wishes, Rita decided to study medicine at the University of Turin. She studied how cells divided and multiplied, to help her improve research for medical problems like dementia, delayed wound healing, and tumor diseases. She graduated in the 1930s, only to have the Italian dictator at the time, Benito Mussolini, institute laws that forbid people of Jewish heritage from working at Universities or in most professions. That didn’t stop her, and she began to research not in University labs, but in a makeshift lab in her bedroom in secret. She used sharpened sewing needles as surgical materials.  She continued research throughout World War II, even when bombing forced Rita and her family to flee Turin or live underground. When the war ended, she served as a doctor in a refugee camp before returning to the University of Turin, and her research papers allowed her to come to America and teach at Washington University St. Louis.
@@ -79,8 +157,8 @@ Born in Turin, Italy in 1909, Rita’s love for science and medicine was challen
   
     <button class="accordion">Rosalind Franklin </button>
 <div class="panel">
-<h3>(1920-1958)</h3>
-    <h4>The genetic makeup of genius, overlooked</h4>
+<h4>(1920-1958)</h4>
+    <h5>The genetic makeup of genius, overlooked</h5>
     <img src="images/rfranklin.jpg" height="400" width="350">
         <p>Rosalind Franklin was a rebel, and began questioning authority when she was little, asking her parents if they were sure god wasn’t a she and wanting to take the most challenging math classes offered. In 1962, three men were awarded the nobel prize for their claimed discovery of DNA. Franklin loved to advocate for herself,  even if it meant butting heads with her boss and male colleagues. Maurice Wilkins was one of these colleagues, who, feeling frustrated, decided to take her work (without her permission of course) and show it to other scientists, Watson and Crick, struggling with incorrect models of DNA, yet Watson and Crick were both famed for this discovery later on. They used her “Photo 51” to publish a paper and win the Nobel Prize while she remained oblivious. She passed away at age 39 from Ovarian cancer, still not knowing that the three of them had stolen her work. Luckily, she has begun to get some recognition today and hopefully into the future.
 </p>
@@ -89,8 +167,8 @@ Born in Turin, Italy in 1909, Rita’s love for science and medicine was challen
     
     <button class="accordion">Ruby Sakae Hirose</button>
 <div class="panel">
- <h3>(1920-1958)</h3>
- <h4>Ground-breaking research and development</h4>
+ <h4>(1920-1958)</h4>
+ <h5>Ground-breaking research and development</h5>
     <img src="images/rhirose.jpg">
     <p>Ruby Hirose was born and raised in a Washington suburb,  the first second-generation Japanese immigrant to graduate from her high school, and often faced both issues of racial identity and discrimination. She went on to graduate with a pharmacology degree and later a doctorate. Dr. Ruby Hirose was a Japanese-American biochemist and bacteriologist who conducted vaccine research essential to developing the polio vaccine. In 1940, she was one of only 10 women recognized at the American Chemical Society meeting in Ohio. She suffered from hay fever, helping her continue developing different treatments and also improved treatments that used pollen extracts to help with desensitizing allergies. Because of the fact that she was a Japanese American at the time of World War II, her family was sent to internment camps. Since Ruby was living in Cincinnati at the time, she was able to escape the same fate and could continue her research. 
 </p>
